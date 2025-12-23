@@ -34,3 +34,7 @@ COPY ./spx.ini /usr/local/etc/php/conf.d/spx.ini
 RUN docker-php-ext-enable spx
 
 RUN docker-php-ext-install pdo pdo_mysql
+
+# Enable FPM status page
+RUN echo "pm.status_path = /status" >> /usr/local/etc/php-fpm.d/www.conf
+RUN echo "process.dumpable = yes" >> /usr/local/etc/php-fpm.d/www.conf
