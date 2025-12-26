@@ -26,3 +26,12 @@ for i in {1..20}; do
 done
 
 sleep 5
+
+# -----------------------------
+# 2. Load phase
+# -----------------------------
+echo "Running k6 baseline load..."
+k6 run /scripts/baseline.js
+
+echo "⏳ Waiting for Prometheus to collect data..."
+sleep 5
