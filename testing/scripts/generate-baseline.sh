@@ -153,3 +153,69 @@ for route in "${ROUTES[@]}"; do
   ERROR_RATE=${ERROR_RATE:-0}
   MAX_LATENCY=${MAX_LATENCY:-0}
   THROUGHPUT_RPS=${THROUGHPUT_RPS:-0}
+
+  # ---------------------------------------------------
+  # LOGGING
+  # ---------------------------------------------------
+
+  echo "Route        : $route"
+  echo "P95          : $P95"
+  echo "P99          : $P99"
+  echo "AVG          : $AVG"
+  echo "Error Rate   : $ERROR_RATE"
+  echo "Max Latency  : $MAX_LATENCY"
+  echo "Throughput   : $THROUGHPUT_RPS"
+
+  # ---------------------------------------------------
+  # SEND BASELINE
+  # ---------------------------------------------------
+
+  curl -s -X POST "$REGRESSION_URL/baseline" \
+    -H "Content-Type: application/json" \
+    -d "{
+      \"route\": \"$route\",
+      \"p95\": $P95,
+      \"p99\": $P99,
+      \"avg\": $AVG,
+      \"error_rate\": $ERROR_RATE,
+      \"max_latency\": $MAX_LATENCY,
+      \"throughput\": $THROUGHPUT_RPS
+    }" > /dev/null
+
+done
+
+echo "✅ Baseline generation complete"
+
+
+# -----------------------------
+# 4. Create regression by stimulating slow requests (you can replace this with any other method to create regressions, e.g., deploying a new version with a known performance issue)
+# -----------------------------
+echo "Stimulating slow requests..."
+k6 run /scripts/ingest_slow_requests.js
+
+echo "✅ k6 tests completed"
+
+  echo "AVG          : $AVG"
+  echo "Error Rate   : $ERROR_RATE"
+  echo "Max Latency  : $MAX_LATENCY"
+  echo "Throughput   : $THROUGHPUT_RPS"
+
+  # ---------------------------------------------------
+  # SEND BASELINE
+  # ---------------------------------------------------
+
+  curl -s -X POST "$REGRESSION_URL/baseline" \
+    -H "Content-Type: application/json" \
+    -d "{
+      \"route\": \"$route\",
+      \"p95\": $P95,
+      \"p99\": $P99,
+      \"avg\": $AVG,
+      \"error_rate\": $ERROR_RATE,
+      \"max_latency\": $MAX_LATENCY,
+      \"throughput\": $THROUGHPUT_RPS
+    }" > /dev/null
+
+done
+
+echo "✅ Baseline generation complete"
