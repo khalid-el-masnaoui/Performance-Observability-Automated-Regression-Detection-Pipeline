@@ -88,4 +88,31 @@ for route in "${ROUTES[@]}"; do
         ERROR_RATE=0
     fi
 
- 
+  # ---------------------------------------------------
+  # MAX LATENCY
+  # ---------------------------------------------------
+
+  MAX_QUERY="
+    max_over_time(
+      app_request_duration_seconds_sum{route=\"$route\"}[5m]
+    )
+  "
+
+  MAX_LATENCY=$(curl -sG "$PROM_URL/api/v1/query" \
+    --data-urlencode "query=$MAX_QUERY" \
+    | jq -r '.data.result[0].value[1]')
+
+  # ---------------------------------------------------
+  # THROUGHPUT
+  # ---------------------------------------------------
+
+  THROUGHPUT_RPS_QUERY="
+    sum(rate(app_request_duration_seconds_count{route=\"$route\"}[1m]))
+  "
+
+  THROUGHPUT_RPS=$(curl -sG "$PROM_URL/api/v1/query" \
+    --data-urlencode "query=$THROUGHPUT_RPS_QUERY" \
+    | jq -r '.data.result[0].value[1]')
+
+
+  
