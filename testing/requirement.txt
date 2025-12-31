@@ -1,0 +1,1 @@
+k6 --> (installed locally) You can install k6 by following the instructions on the official website: https://k6.io/docs/getting-started/installation/.
