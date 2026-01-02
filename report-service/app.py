@@ -22,6 +22,22 @@ import pandas as pd
 
 app = Flask(__name__)
 
+BASELINE_BASE_DIR = "/reports/baselines"
+REGRESSION_BASE_DIR = "/reports/regressions"
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+
+BASELINE_DIR = f"{BASELINE_BASE_DIR}/baselines"
+HISTORY_DIR = f"{BASELINE_BASE_DIR}/history"
+CHART_DIR = f"{REGRESSION_BASE_DIR}/charts"
+
+REGRESSION_DIR = f"{REGRESSION_BASE_DIR}/regressions"
+REGRESSION_HISTORY_DIR = f"{REGRESSION_BASE_DIR}/history"
+REGRESSION_CHART_DIR = f"{REGRESSION_BASE_DIR}/charts"
+
+os.makedirs(BASELINE_DIR, exist_ok=True)
+os.makedirs(HISTORY_DIR, exist_ok=True)
+os.makedirs(CHART_DIR, exist_ok=True)
+
+os.makedirs(REGRESSION_DIR, exist_ok=True)
+os.makedirs(REGRESSION_HISTORY_DIR, exist_ok=True)
+os.makedirs(REGRESSION_CHART_DIR, exist_ok=True)
