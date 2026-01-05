@@ -69,3 +69,24 @@ def save_history(route, metrics):
         HISTORY_DIR,
         f"{safe_route}.json"
     )
+
+    history = []
+
+    if os.path.exists(history_file):
+        with open(history_file, "r") as f:
+            history = json.load(f)
+
+    history.append({
+        "timestamp": datetime.datetime.now().isoformat(),
+        "p95": metrics["p95"],
+        "p99": metrics["p99"],
+        "avg": metrics["avg"],
+        "error_rate": metrics["error_rate"],
+        "max_latency": metrics["max_latency"],
+        "throughput": metrics["throughput"]
+    })
+
+    with open(history_file, "w") as f:
+        json.dump(history, f, indent=2)
+
+    return history
