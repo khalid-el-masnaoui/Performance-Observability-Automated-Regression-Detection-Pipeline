@@ -166,3 +166,25 @@ def generate_regression_chart(route, history):
         REGRESSION_CHART_DIR,
         f"regression_{route.replace('/', '_')}.png"
     )
+
+    plt.figure(figsize=(10, 5))
+
+    plt.plot(
+        df["timestamp"],
+        df["increase_percent"],
+        marker="o"
+    )
+
+    plt.title(f"Regression Trend (P95) — {route}")
+
+    plt.ylabel("Increase %")
+
+    plt.xticks(rotation=45)
+
+    plt.tight_layout()
+
+    plt.savefig(chart_path)
+
+    plt.close()
+
+    return chart_path
