@@ -276,3 +276,24 @@ def generate_baseline():
     elements.append(table)
 
     elements.append(Spacer(1, 30))
+
+    # ---------------------------------------------
+    # Trend chart
+    # ---------------------------------------------
+
+    elements.append(
+        Paragraph(
+            "<b>P95 Historical Trend</b>",
+            styles["Heading2"]
+        )
+    )
+
+    elements.append(Spacer(1, 10))
+
+    elements.append(
+        Image(chart_path, width=500, height=250)
+    )
+
+    elements.append(Spacer(1, 20))
+
+    
