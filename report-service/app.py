@@ -341,3 +341,27 @@ def generate_baseline():
         "history_entries": len(history)
 
     })
+
+
+# ---------------------------------------------------
+# Generate Regression PDF
+# ---------------------------------------------------
+@app.route("/generate", methods=["POST"])
+def generate():
+
+    data = request.json
+
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    filename = f"report_{timestamp}.pdf"
+
+    filepath = os.path.join(REGRESSION_DIR, filename)
+
+    doc = SimpleDocTemplate(
+        filepath,
+        pagesize=A3
+    )
+
+    styles = getSampleStyleSheet()
+
+    content = []
