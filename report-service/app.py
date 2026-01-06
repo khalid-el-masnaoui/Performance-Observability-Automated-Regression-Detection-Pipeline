@@ -152,3 +152,17 @@ def save_regression_history(route, payload):
         json.dump(history, f, indent=2)
 
     return history
+
+# ---------------------------------------------------
+# Generate Regression Trend Chart (P95)
+# ---------------------------------------------------
+def generate_regression_chart(route, history):
+
+    df = pd.DataFrame(history)
+
+    df["timestamp"] = pd.to_datetime(df["timestamp"])
+
+    chart_path = os.path.join(
+        REGRESSION_CHART_DIR,
+        f"regression_{route.replace('/', '_')}.png"
+    )
