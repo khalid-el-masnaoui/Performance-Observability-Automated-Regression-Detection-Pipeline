@@ -330,4 +330,14 @@ def generate_baseline():
 
     elements.append(hist_table)
 
-    
+    # ---------------------------------------------
+    # Build PDF
+    # ---------------------------------------------
+    doc.build(elements)
+
+    return jsonify({
+        "status": "generated",
+        "file": filename,
+        "history_entries": len(history)
+
+    })
