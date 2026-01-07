@@ -491,4 +491,55 @@ def generate():
 
         content.append(Spacer(1, 20))
 
-        
+        # --------------------------------------------
+        # Historical table
+        # --------------------------------------------
+        content.append(
+            Paragraph(
+                "<b>Previous Regression Entries</b>",
+                styles["Heading3"]
+            )
+        )
+
+        hist_table_data = [[
+            "Timestamp",
+            "Baseline",
+            "Current",
+            "Increase %",
+            "P99",
+            "AVG",
+            "Error Rate",
+            "Max Latency",
+            "Throughput"
+        ]]
+
+        for entry in history[-10:]:
+
+            hist_table_data.append([
+                entry["timestamp"],
+                fmt_ms(entry["baseline_p95"]),
+                fmt_ms(entry["current_p95"]),
+                fmt(entry["increase_percent"]),
+                fmt_ms(entry["current_metrics"].get("p99", 0)),
+                fmt_ms(entry["current_metrics"].get("avg", 0)),
+                fmt(entry["current_metrics"].get("error_rate", 0)),
+                fmt_ms(entry["current_metrics"].get("max_latency", 0)),
+                fmt(entry["current_metrics"].get("throughput", 0))
+            ])
+
+        hist_table = Table(
+            hist_table_data,
+            colWidths=[170, 75, 75, 75, 75, 75, 75, 90, 75]
+        )
+
+        hist_table.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.lightgrey),
+            ('GRID', (0, 0), (-1, -1), 1, colors.black),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ]))
+
+        content.append(hist_table)
+
+        content.append(Spacer(1, 40))
+
+    
