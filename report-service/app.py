@@ -387,4 +387,20 @@ def generate():
 
     content.append(Spacer(1, 20))
 
-    
+    # ------------------------------------------------
+    # Process each route
+    # ------------------------------------------------
+    for route, metrics in data.items():
+
+        baseline = float(metrics.get("baseline", 0))
+
+        current = metrics.get("current", {})
+
+        current_p95 = float(current.get("p95", 0))
+
+
+        increase = float(metrics.get("increase", 0) * 100)
+
+        regression = metrics.get("regression", False)
+
+        
