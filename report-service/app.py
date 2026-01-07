@@ -365,3 +365,26 @@ def generate():
     styles = getSampleStyleSheet()
 
     content = []
+
+    # ------------------------------------------------
+    # Title
+    # ------------------------------------------------
+    content.append(
+        Paragraph(
+            "Performance Regression Report",
+            styles["Title"]
+        )
+    )
+
+    content.append(Spacer(1, 20))
+
+    content.append(
+        Paragraph(
+            f"Generated at: {timestamp}",
+            styles["Normal"]
+        )
+    )
+
+    content.append(Spacer(1, 20))
+
+    
