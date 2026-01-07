@@ -552,3 +552,7 @@ def generate():
         "file": filename,
         "path": filepath
     })
+
+@app.route("/health")
+def health():
+    return {"status": "ok"}
