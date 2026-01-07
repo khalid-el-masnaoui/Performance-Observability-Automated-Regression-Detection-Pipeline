@@ -469,4 +469,26 @@ def generate():
 
         content.append(Spacer(1, 20))
 
-       
+        # --------------------------------------------
+        # Trend chart
+        # --------------------------------------------
+        content.append(
+            Paragraph(
+                "<b>Regression Trend (P95) History</b>",
+                styles["Heading3"]
+            )
+        )
+
+        content.append(Spacer(1, 10))
+
+        content.append(
+            Image(
+                chart_path,
+                width=500,
+                height=250
+            )
+        )
+
+        content.append(Spacer(1, 20))
+
+        
