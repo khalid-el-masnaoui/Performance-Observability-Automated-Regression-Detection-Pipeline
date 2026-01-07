@@ -421,4 +421,12 @@ def generate():
             history_payload
         )
 
-       
+        # --------------------------------------------
+        # Generate chart
+        # --------------------------------------------
+        chart_path = generate_regression_chart(
+            route,
+            history
+        )
+
+        
