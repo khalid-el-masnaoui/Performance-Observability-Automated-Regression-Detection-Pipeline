@@ -441,4 +441,32 @@ def generate():
 
         content.append(Spacer(1, 10))
 
-        
+        # --------------------------------------------
+        # Summary table
+        # --------------------------------------------
+        table_data = [
+            ["Metric", "Value"],
+            ["Baseline p95", fmt_ms(baseline)],
+            ["Current p95", fmt_ms(current_p95)],
+            ["Increase %", f"{fmt(increase)}%"],
+            ["Regression", str(regression)],
+            ["History Samples", str(len(history))]
+        ]
+
+        table = Table(
+            table_data,
+            colWidths=[200, 250]
+        )
+
+        table.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+            ('GRID', (0, 0), (-1, -1), 1, colors.black),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ]))
+
+        content.append(table)
+
+        content.append(Spacer(1, 20))
+
+       
