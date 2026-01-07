@@ -403,4 +403,22 @@ def generate():
 
         regression = metrics.get("regression", False)
 
-        
+        # --------------------------------------------
+        # Store history
+        # --------------------------------------------
+        history_payload = {
+            "timestamp": datetime.datetime.now().isoformat(),
+            "route": route,
+            "baseline_p95": baseline,
+            "current_p95": current_p95,
+            "increase_percent": increase,
+            "regression": regression,
+            "current_metrics": current
+        }
+
+        history = save_regression_history(
+            route,
+            history_payload
+        )
+
+       
