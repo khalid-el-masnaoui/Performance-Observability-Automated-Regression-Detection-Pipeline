@@ -21,3 +21,9 @@ histogram_quantile(
   0.95,
   sum(rate(app_request_duration_seconds_bucket[2m])) by (le, route)
 )`,
+
+  p99: `
+histogram_quantile(
+  0.99,
+  sum(rate(app_request_duration_seconds_bucket[2m])) by (le, route)
+)`,
