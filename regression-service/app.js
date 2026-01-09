@@ -27,3 +27,11 @@ histogram_quantile(
   0.99,
   sum(rate(app_request_duration_seconds_bucket[2m])) by (le, route)
 )`,
+
+  avg: `
+sum(rate(app_request_duration_seconds_sum[2m])) by (route)
+/
+sum(rate(app_request_duration_seconds_count[2m])) by (route)
+`,
+
+  
