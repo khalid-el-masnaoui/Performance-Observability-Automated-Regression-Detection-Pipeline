@@ -39,3 +39,7 @@ sum(rate(app_requests_total{status=~"5.."}[2m])) by (route)
 /
 sum(rate(app_requests_total[2m])) by (route)
 `,
+
+  throughput: `
+sum(rate(app_request_duration_seconds_count[1m])) by (route)
+`,
