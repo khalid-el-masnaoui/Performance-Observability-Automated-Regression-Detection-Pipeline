@@ -43,3 +43,8 @@ sum(rate(app_requests_total[2m])) by (route)
   throughput: `
 sum(rate(app_request_duration_seconds_count[1m])) by (route)
 `,
+
+  max_latency: `
+max_over_time(app_request_duration_seconds_sum[5m])
+`
+};
