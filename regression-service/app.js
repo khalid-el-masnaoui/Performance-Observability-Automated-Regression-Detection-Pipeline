@@ -84,3 +84,20 @@ async function queryPrometheusP95(route) {
 
 
 async function queryPrometheusMetrics(route) {
+
+  const build = async (query) => {
+    const result = await runQuery(query);
+
+    for (const item of result) {
+
+      if (item.metric.route !== route) continue;
+
+      const value = parseFloat(item.value[1]);
+
+      if (isNaN(value)) return 0;
+
+      return Number(value.toFixed(4));
+    }
+
+    return 0;
+  };
