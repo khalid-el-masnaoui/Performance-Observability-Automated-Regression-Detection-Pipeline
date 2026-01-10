@@ -67,3 +67,16 @@ async function runQuery(query) {
     return [];
   }
 }
+
+async function queryPrometheusP95(route) {
+  const query = `
+    histogram_quantile(0.95,
+      sum(rate(app_request_duration_seconds_bucket{route="${route}"}[2m])) by (le)
+    )
+  `;
+    
+    const result = await runQuery(query);
+    if (!result.length) return 0;
+
+    return parseFloat(result[0].value[1]);
+}
