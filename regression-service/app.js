@@ -48,3 +48,22 @@ sum(rate(app_request_duration_seconds_count[1m])) by (route)
 max_over_time(app_request_duration_seconds_sum[5m])
 `
 };
+
+// --------------------
+// Query Prometheus
+// --------------------
+async function runQuery(query) {
+
+  try {
+
+    const res = await axios.get(`${PROM_URL}/api/v1/query`, {
+      params: { query }
+    });
+
+    return res.data?.data?.result || [];
+
+  } catch (e) {
+
+    return [];
+  }
+}
