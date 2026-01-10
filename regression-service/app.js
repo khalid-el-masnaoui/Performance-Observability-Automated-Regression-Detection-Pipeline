@@ -101,3 +101,14 @@ async function queryPrometheusMetrics(route) {
 
     return 0;
   };
+
+  return {
+    p95: await build(QUERIES.p95),
+    p99: await build(QUERIES.p99),
+    avg: await build(QUERIES.avg),
+    rps: await build(QUERIES.rps),
+    error_rate: await build(QUERIES.error_rate),
+    throughput: await build(QUERIES.throughput),
+    max_latency: await build(QUERIES.max_latency),
+  };
+}
