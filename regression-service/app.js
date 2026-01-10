@@ -80,3 +80,7 @@ async function queryPrometheusP95(route) {
 
     return parseFloat(result[0].value[1]);
 }
+
+
+
+async function queryPrometheusMetrics(route) {
