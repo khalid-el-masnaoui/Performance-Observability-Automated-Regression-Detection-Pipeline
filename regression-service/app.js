@@ -113,8 +113,6 @@ async function queryPrometheusMetrics(route) {
   };
 }
 
-
-
 async function queryPrometheusMetricsOptimized() {
 
   const raw = {};
@@ -143,3 +141,12 @@ async function queryPrometheusMetricsOptimized() {
       if (!final[route]) {
         final[route] = {};
       }
+
+      final[route][metricName] = isNaN(value)
+        ? 0
+        : Number(value.toFixed(4));
+    }
+  }
+
+  return final;
+}
