@@ -148,3 +148,11 @@ async function queryPrometheusMetricsOptimized() {
 
   return final;
 }
+
+
+// --------------------
+// Trigger SPX
+// --------------------
+async function triggerSPX(route) {
+  await redis.setex(`spx:${route}`, 60, "1");
+}
