@@ -131,3 +131,15 @@ async function queryPrometheusMetricsOptimized() {
   for (const metricName in raw) {
 
     const series = raw[metricName];
+
+    for (const item of series) {
+
+      const route = item.metric.route;
+
+      if (!route) continue;
+
+      const value = parseFloat(item.value[1]);
+
+      if (!final[route]) {
+        final[route] = {};
+      }
