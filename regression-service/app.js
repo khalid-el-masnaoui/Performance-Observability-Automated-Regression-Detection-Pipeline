@@ -112,3 +112,7 @@ async function queryPrometheusMetrics(route) {
     max_latency: await build(QUERIES.max_latency),
   };
 }
+
+
+
+async function queryPrometheusMetricsOptimized() {
