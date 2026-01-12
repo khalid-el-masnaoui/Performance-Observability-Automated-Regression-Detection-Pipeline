@@ -125,3 +125,9 @@ async function queryPrometheusMetricsOptimized() {
 
     raw[name] = result;
   }
+
+  const final = {};
+
+  for (const metricName in raw) {
+
+    const series = raw[metricName];
