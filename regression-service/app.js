@@ -116,3 +116,12 @@ async function queryPrometheusMetrics(route) {
 
 
 async function queryPrometheusMetricsOptimized() {
+
+  const raw = {};
+
+  for (const [name, query] of Object.entries(QUERIES)) {
+
+    const result = await runQuery(query);
+
+    raw[name] = result;
+  }
