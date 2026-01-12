@@ -165,3 +165,19 @@ async function sendSlack(route, current, baseline, increase, regression) {
     console.log("No Slack webhook configured");
     return;
   }
+
+  const payload = {
+    attachments: [
+      {
+        color: regression ? "#ff0000" : "#36a64f",
+        title: `🚨 Performance Alert: ${route}`,
+        fields: [
+          { title: "Current p95", value: `${current.toFixed(2)}s`, short: true },
+          { title: "Baseline p95", value: `${baseline.toFixed(2)}s`, short: true },
+          { title: "Increase", value: `${(increase * 100).toFixed(1)}%`, short: true },
+          { title: "Regression", value: String(regression), short: true },
+        ],
+        footer: "Regression Service",
+      },
+    ],
+  };
