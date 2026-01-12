@@ -181,3 +181,10 @@ async function sendSlack(route, current, baseline, increase, regression) {
       },
     ],
   };
+
+  try {
+    await axios.post(SLACK_WEBHOOK, payload);
+  } catch (err) {
+    console.error("Slack error:", err.message);
+  }
+}
