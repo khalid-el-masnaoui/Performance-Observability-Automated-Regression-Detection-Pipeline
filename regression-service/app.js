@@ -156,3 +156,12 @@ async function queryPrometheusMetricsOptimized() {
 async function triggerSPX(route) {
   await redis.setex(`spx:${route}`, 60, "1");
 }
+
+// --------------------
+// Send Slack
+// --------------------
+async function sendSlack(route, current, baseline, increase, regression) {
+  if (!SLACK_WEBHOOK) {
+    console.log("No Slack webhook configured");
+    return;
+  }
