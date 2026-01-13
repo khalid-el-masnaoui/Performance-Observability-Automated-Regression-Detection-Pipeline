@@ -188,3 +188,8 @@ async function sendSlack(route, current, baseline, increase, regression) {
     console.error("Slack error:", err.message);
   }
 }
+
+// --------------------
+// Generate Baseline PDF report
+// --------------------
+async function generateBaselineReport(route, payload) {
