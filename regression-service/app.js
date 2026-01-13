@@ -216,3 +216,13 @@ async function generateBaselineReport(route, payload) {
         console.error("Baseline report error:", err.message);
     }
 }
+
+// --------------------
+// Generate Regression PDF report
+// --------------------
+async function generateReport(route, data) {
+  try {
+    await axios.post(REPORT_URL+"/generate", {
+      [route]: data,
+    });
+  }
