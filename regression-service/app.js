@@ -193,3 +193,18 @@ async function sendSlack(route, current, baseline, increase, regression) {
 // Generate Baseline PDF report
 // --------------------
 async function generateBaselineReport(route, payload) {
+
+    try {
+
+        await axios.post(
+            REPORT_URL+"/generate-baseline",
+            {
+                route,
+                p95: payload.p95,
+                p99: payload.p99,
+                avg: payload.avg,
+                error_rate: payload.error_rate,
+                max_latency: payload.max_latency,
+                throughput: payload.throughput
+            }
+        );
