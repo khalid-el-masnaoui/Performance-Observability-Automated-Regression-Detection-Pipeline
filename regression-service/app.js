@@ -208,3 +208,11 @@ async function generateBaselineReport(route, payload) {
                 throughput: payload.throughput
             }
         );
+
+        console.log(`Baseline report generated for ${route}`);
+
+    } catch (err) {
+
+        console.error("Baseline report error:", err.message);
+    }
+}
