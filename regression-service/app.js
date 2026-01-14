@@ -239,3 +239,15 @@ app.post("/baseline", async (req, res) => {
     if (!route || !p95) {
         return res.status(400).json({ error: "route and p95 required" });
     }
+
+    const payload = {
+        p95,
+        p99: p99 || 0,
+        avg: avg || 0,
+        error_rate: error_rate || 0,
+        max_latency: max_latency || 0,
+        throughput: throughput || 0,
+        updated_at: Date.now(),
+    };
+
+    
