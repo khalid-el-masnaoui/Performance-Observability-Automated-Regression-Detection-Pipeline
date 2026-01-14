@@ -250,4 +250,5 @@ app.post("/baseline", async (req, res) => {
         updated_at: Date.now(),
     };
 
+    await redis.set(`baseline:${route}`, JSON.stringify(payload));
     
