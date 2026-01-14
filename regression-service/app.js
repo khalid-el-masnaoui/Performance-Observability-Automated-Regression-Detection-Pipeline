@@ -235,3 +235,7 @@ async function generateReport(route, data) {
 // --------------------
 app.post("/baseline", async (req, res) => {
     const { route, p95, p99, avg, error_rate, max_latency, throughput } = req.body;
+
+    if (!route || !p95) {
+        return res.status(400).json({ error: "route and p95 required" });
+    }
