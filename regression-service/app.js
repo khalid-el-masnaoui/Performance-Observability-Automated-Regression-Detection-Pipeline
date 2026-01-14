@@ -229,3 +229,9 @@ async function generateReport(route, data) {
     console.error("Report error:", err.message);
   }
 }
+
+// --------------------
+// Store baseline
+// --------------------
+app.post("/baseline", async (req, res) => {
+    const { route, p95, p99, avg, error_rate, max_latency, throughput } = req.body;
