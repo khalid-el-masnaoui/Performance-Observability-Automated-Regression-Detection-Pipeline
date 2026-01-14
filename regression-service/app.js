@@ -225,4 +225,7 @@ async function generateReport(route, data) {
     await axios.post(REPORT_URL+"/generate", {
       [route]: data,
     });
+  } catch (err) {
+    console.error("Report error:", err.message);
   }
+}
