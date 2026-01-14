@@ -252,3 +252,7 @@ app.post("/baseline", async (req, res) => {
 
     await redis.set(`baseline:${route}`, JSON.stringify(payload));
     
+    await generateBaselineReport(route, payload);
+
+    res.json({ status: "stored", route });
+});
