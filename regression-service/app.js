@@ -266,3 +266,7 @@ app.post("/alert", async (req, res) => {
   const alerts = req.body.alerts || [];
 
   const results = [];
+
+  for (const alert of alerts) {
+    const route = alert.labels?.route;
+    if (!route) continue;
