@@ -270,3 +270,11 @@ app.post("/alert", async (req, res) => {
   for (const alert of alerts) {
     const route = alert.labels?.route;
     if (!route) continue;
+
+    const baselineRaw = await redis.get(`baseline:${route}`);
+    if (!baselineRaw) {
+      console.log(`No baseline for ${route}`);
+      continue;
+    }
+
+    const baseline = JSON.parse(baselineRaw);
