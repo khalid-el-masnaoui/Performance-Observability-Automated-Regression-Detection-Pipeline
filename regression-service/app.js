@@ -256,3 +256,10 @@ app.post("/baseline", async (req, res) => {
 
     res.json({ status: "stored", route });
 });
+
+// --------------------
+// Alert handler
+// --------------------
+app.post("/alert", async (req, res) => {
+  //console.log("Received alert:", JSON.stringify(req.body, null, 2));
+  
