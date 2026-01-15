@@ -262,4 +262,7 @@ app.post("/baseline", async (req, res) => {
 // --------------------
 app.post("/alert", async (req, res) => {
   //console.log("Received alert:", JSON.stringify(req.body, null, 2));
-  
+    
+  const alerts = req.body.alerts || [];
+
+  const results = [];
