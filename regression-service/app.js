@@ -328,3 +328,11 @@ app.post("/check", async (req, res) => {
   const keys = await redis.keys("baseline:*");
 
   const results = [];
+
+  for (const key of keys) {
+    const route = key.replace("baseline:", "");
+    const baseline = JSON.parse(await redis.get(key));
+
+    //const current = await queryPrometheusP95(route);
+    //const currentMetrics = await queryPrometheusMetrics(route);
+    const currentMetricsAll = await queryPrometheusMetricsOptimized();
