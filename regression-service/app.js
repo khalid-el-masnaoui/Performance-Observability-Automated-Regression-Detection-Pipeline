@@ -336,3 +336,21 @@ app.post("/check", async (req, res) => {
     //const current = await queryPrometheusP95(route);
     //const currentMetrics = await queryPrometheusMetrics(route);
     const currentMetricsAll = await queryPrometheusMetricsOptimized();
+
+    if (!currentMetricsAll[route]) continue;
+
+    const currentMetrics = currentMetricsAll[route];
+
+    const increase = (currentMetrics.p95 - baseline.p95) / baseline.p95;
+
+    results.push({
+      route,
+      baseline: baseline.p95,
+      current: currentMetrics,
+      increase,
+      regression: increase > 0.3,
+    });
+  }
+
+  res.json(results);
+});
