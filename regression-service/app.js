@@ -292,3 +292,7 @@ app.post("/alert", async (req, res) => {
     if (!baseline.p95) continue;
 
     const increase = (currentMetrics.p95 - baseline.p95) / baseline.p95;
+    const regression = increase > 0.3;
+   
+    //console.log(`Route: ${route}, increase: ${increase.toFixed(2)}, Regression: ${regression}`);
+    if(regression) {
