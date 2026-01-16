@@ -325,3 +325,6 @@ app.post("/alert", async (req, res) => {
 // Manual check
 // --------------------
 app.post("/check", async (req, res) => {
+  const keys = await redis.keys("baseline:*");
+
+  const results = [];
