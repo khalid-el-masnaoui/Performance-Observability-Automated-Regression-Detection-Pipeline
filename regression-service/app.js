@@ -308,3 +308,6 @@ app.post("/alert", async (req, res) => {
 
         // always trigger SPX
         await triggerSPX(route);
+
+        // always send Slack
+        await sendSlack(route, currentMetrics.p95, baseline.p95, increase, regression);
