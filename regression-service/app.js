@@ -311,3 +311,12 @@ app.post("/alert", async (req, res) => {
 
         // always send Slack
         await sendSlack(route, currentMetrics.p95, baseline.p95, increase, regression);
+
+        // generate report
+        await generateReport(route, result);
+    }
+
+  }
+
+  res.json({ results });
+});
