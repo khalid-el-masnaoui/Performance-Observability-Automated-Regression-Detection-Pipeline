@@ -290,3 +290,5 @@ app.post("/alert", async (req, res) => {
     currentMetrics = currentMetricsAll[route];
       
     if (!baseline.p95) continue;
+
+    const increase = (currentMetrics.p95 - baseline.p95) / baseline.p95;
