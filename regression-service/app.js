@@ -320,3 +320,8 @@ app.post("/alert", async (req, res) => {
 
   res.json({ results });
 });
+
+// --------------------
+// Manual check
+// --------------------
+app.post("/check", async (req, res) => {
