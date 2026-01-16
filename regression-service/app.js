@@ -303,3 +303,8 @@ app.post("/alert", async (req, res) => {
             increase,
             regression,
         };
+
+        results.push(result);
+
+        // always trigger SPX
+        await triggerSPX(route);
