@@ -296,3 +296,10 @@ app.post("/alert", async (req, res) => {
    
     //console.log(`Route: ${route}, increase: ${increase.toFixed(2)}, Regression: ${regression}`);
     if(regression) {
+        const result = {
+            route,
+            baseline: baseline.p95,
+            current: currentMetrics,
+            increase,
+            regression,
+        };
