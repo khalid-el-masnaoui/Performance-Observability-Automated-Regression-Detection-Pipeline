@@ -283,3 +283,10 @@ app.post("/alert", async (req, res) => {
     //const currentMetrics = await queryPrometheusMetrics(route);
     const currentMetricsAll = await queryPrometheusMetricsOptimized();
       
+    //console.log(`Current metrics for ${route}:`, currentMetricsAll);
+      
+    if (!currentMetricsAll[route]) continue;
+      
+    currentMetrics = currentMetricsAll[route];
+      
+    if (!baseline.p95) continue;
