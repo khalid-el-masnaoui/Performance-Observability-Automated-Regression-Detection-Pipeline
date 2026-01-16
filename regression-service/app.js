@@ -278,3 +278,8 @@ app.post("/alert", async (req, res) => {
     }
 
     const baseline = JSON.parse(baselineRaw);
+
+    //const current = await queryPrometheusP95(route);
+    //const currentMetrics = await queryPrometheusMetrics(route);
+    const currentMetricsAll = await queryPrometheusMetricsOptimized();
+      
