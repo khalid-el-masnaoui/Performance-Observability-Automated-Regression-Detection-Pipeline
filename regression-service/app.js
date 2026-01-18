@@ -362,3 +362,8 @@ app.post("/check", async (req, res) => {
 app.get("/health", (req, res) => {
   res.json({ status: "ok" });
 });
+
+// --------------------
+app.listen(8090, () => {
+  console.log("Regression service running on port 8090");
+});
