@@ -354,3 +354,11 @@ app.post("/check", async (req, res) => {
 
   res.json(results);
 });
+
+
+// -------------------------
+// health check
+// -------------------------
+app.get("/health", (req, res) => {
+  res.json({ status: "ok" });
+});
