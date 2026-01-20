@@ -60,3 +60,17 @@ services:
       - "-nginx.scrape-uri=http://nginx/nginx_status"
     ports:
       - "9113:9113"
+
+  regression-service:
+    build:
+      context: ./regression-service
+      dockerfile: regression-service.dockerfile
+    ports:
+      - "8090:8090"
+    env_file:
+      - .env
+    depends_on:
+      - redis
+      - prometheus
+      - alertmanager
+      - report-service
