@@ -43,12 +43,20 @@ RUN echo "process.dumpable = yes" >> /usr/local/etc/php-fpm.d/www.conf
 RUN pecl install apcu \
     && docker-php-ext-enable apcu
 
+#add user and group
+RUN groupadd -f www-data && \
+    (id -u www-data &> /dev/null || useradd -G www-data www-data -D)
+
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
 
+
 # Install Prometheus PHP client
-RUN composer require promphp/prometheus_client_php
+# RUN composer require promphp/prometheus_client_php
 # COPY ../src/composer.json /var/www/html/composer.json
-RUN composer install
+
+ENTRYPOINT ["./entrypoint.sh"]
+# The default command to run after the entrypoint
+CMD ["php-fpm"]

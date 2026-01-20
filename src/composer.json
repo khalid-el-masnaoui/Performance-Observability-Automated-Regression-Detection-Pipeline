@@ -1,5 +1,5 @@
 {
     "require": {
-        "promphp/prometheus_client_php": "^2.0"
+        "promphp/prometheus_client_php": "^2.15"
     }
 }

@@ -2,3 +2,4 @@ src/vendor/
 spx-data/
 reports/
 .env
+src/composer.lock
