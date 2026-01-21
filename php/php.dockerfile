@@ -57,6 +57,10 @@ WORKDIR /var/www/html
 # RUN composer require promphp/prometheus_client_php
 # COPY ../src/composer.json /var/www/html/composer.json
 
-ENTRYPOINT ["./entrypoint.sh"]
+
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+ENTRYPOINT ["entrypoint.sh"]
 # The default command to run after the entrypoint
 CMD ["php-fpm"]
