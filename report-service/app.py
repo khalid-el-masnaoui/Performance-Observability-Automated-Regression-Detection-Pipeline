@@ -101,11 +101,13 @@ def generate_chart(route, history):
 
     df["timestamp"] = pd.to_datetime(df["timestamp"])
 
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+
     safe_route = route.replace("/", "_")
 
     chart_path = os.path.join(
         CHART_DIR,
-        f"{safe_route}.png"
+        f"{safe_route}_{timestamp}.png"
     )
 
     plt.figure(figsize=(10, 5))
@@ -162,9 +164,11 @@ def generate_regression_chart(route, history):
 
     df["timestamp"] = pd.to_datetime(df["timestamp"])
 
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+
     chart_path = os.path.join(
         REGRESSION_CHART_DIR,
-        f"regression_{route.replace('/', '_')}.png"
+        f"regression_{route.replace('/', '_')}_{timestamp}.png"
     )
 
     plt.figure(figsize=(10, 5))
