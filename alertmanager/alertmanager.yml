@@ -1,3 +1,6 @@
+global:
+  resolve_timeout: 1m
+
 route:
   receiver: regression
   group_by: ['alertname', 'route']
