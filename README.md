@@ -7,3 +7,8 @@ This project integrates:
 - ⚡ Nginx + PHP-FPM application layer
 - 📊 Prometheus metrics collection
 - 📈 Grafana dashboards
+- 🔥 SPX PHP profiler with flamegraphs
+- 🚨 Alertmanager for alert routing
+- 🤖 Custom regression detection service (Node.js)
+- 🧪 k6 load testing for automated performance validation
+- 📄 PDF report generation for baselines & regressions (Python)
