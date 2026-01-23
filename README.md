@@ -32,3 +32,32 @@ This project is designed to detect performance regressions automatically by:
 ## Architecture
 
 The stack is designed to demonstrate a simple full pipeline:
+
+
+```bash
+[k6 Load Test]
+      ↓
+   Nginx
+      ↓
+ PHP-FPM Application
+      ↓
+Prometheus Metrics Exporter
+      ↓
+Prometheus Server
+      ↓
+Alertmanager
+      ↓
+Regression Detector (Node.js)
+      ↓
+Generate PDF Report & Historical Tracking (Python)
+      ↓
+SPX Trigger Service
+      ↓
+SPX PHP Profiler
+      ↓
+Flamegraph Storage
+      ↓
+Flamegraph UI
+      ↓
+Grafana Dashboards + Slack Alerts
+```
