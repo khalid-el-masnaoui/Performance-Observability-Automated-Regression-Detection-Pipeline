@@ -21,3 +21,7 @@ This project is intended as a practical demo of how to wire **PHP request metric
 This project is designed to detect performance regressions automatically by:
 
 1. collecting request latency metrics from PHP routes,
+2. comparing current performance against stored baselines,
+3. triggering SPX profiling when a route slows down,
+4. sending Slack alerts if configured,
+5. generating PDF regression reports,
