@@ -14,3 +14,10 @@ This project integrates:
 - 📄 PDF report generation for baselines & regressions (Python)
 
 This project is intended as a practical demo of how to wire **PHP request metrics**, **alerting**,  **dynamic profiler activation**,  **automatic regression detection** and **historical trend analysis & tracking** together into a reproducible Docker-based performance observability & automated regression detection pipeline.
+
+
+## Overview
+
+This project is designed to detect performance regressions automatically by:
+
+1. collecting request latency metrics from PHP routes,
