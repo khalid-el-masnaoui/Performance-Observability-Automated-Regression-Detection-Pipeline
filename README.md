@@ -25,3 +25,5 @@ This project is designed to detect performance regressions automatically by:
 3. triggering SPX profiling when a route slows down,
 4. sending Slack alerts if configured,
 5. generating PDF regression reports,
+6. surfacing flamegraphs and metrics for root cause analysis.
+7. Automated generation of baseline and regression reports, historical trend analysis & tracking
