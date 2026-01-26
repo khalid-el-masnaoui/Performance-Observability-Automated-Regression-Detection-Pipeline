@@ -66,3 +66,7 @@ Grafana Dashboards + Slack Alerts
 - PHP app exposes `/metrics`, `/flamegraphs`, and application routes
 - Prometheus scrapes PHP, Nginx, and PHP-FPM exporter metrics
 - Alertmanager sends webhook alerts to the regression service
+- Regression service loads baselines from Redis and evaluates current metrics
+- Regression service triggers SPX profiling via Redis and generates reports
+- Report service writes baseline and regression PDF reports to disk
+- `k6` generates synthetic traffic to validate baseline and regression behavior
