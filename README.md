@@ -61,3 +61,8 @@ Flamegraph UI
       ↓
 Grafana Dashboards + Slack Alerts
 ```
+
+- `nginx` reverse-proxies traffic to the PHP application
+- PHP app exposes `/metrics`, `/flamegraphs`, and application routes
+- Prometheus scrapes PHP, Nginx, and PHP-FPM exporter metrics
+- Alertmanager sends webhook alerts to the regression service
