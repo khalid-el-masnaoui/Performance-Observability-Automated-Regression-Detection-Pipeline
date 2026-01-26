@@ -79,3 +79,11 @@ Grafana Dashboards + Slack Alerts
 ├── k6/                         # Load testing scripts
 ├── nginx/                      # Web server config
 ├── php/                        # PHP-FPM setup
+├── prometheus/                 # Metrics config
+├── regression-service/         # Node.js regression detector
+├── report-service/             # Python PDF generator
+├── src/                        # PHP application
+├── reports/                    # Generated PDFs
+├── spx-data/                   # Flamegraph storage
+└── testing/                    # Test utilities
+```
