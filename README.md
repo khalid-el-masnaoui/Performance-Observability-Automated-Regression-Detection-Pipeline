@@ -105,3 +105,5 @@ git clone https://github.com/khalid-el-masnaoui/Performance-Observability-Automa
 cd regression-detection-nodejs
 cp .env.example .env
 ```
+
+Edit `.env` if you need custom host/URL values or add a Slack webhook.
