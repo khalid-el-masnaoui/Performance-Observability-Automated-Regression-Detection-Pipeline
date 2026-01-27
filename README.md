@@ -87,3 +87,10 @@ Grafana Dashboards + Slack Alerts
 ├── spx-data/                   # Flamegraph storage
 └── testing/                    # Test utilities
 ```
+
+
+## Prerequisites
+
+- Docker
+- Docker Compose
+- Git
