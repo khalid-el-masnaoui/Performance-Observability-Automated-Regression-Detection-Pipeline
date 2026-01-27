@@ -94,3 +94,6 @@ Grafana Dashboards + Slack Alerts
 - Docker
 - Docker Compose
 - Git
+
+Optional:
+- K6 (only if need to test locally with `/testing`)
