@@ -107,3 +107,9 @@ cp .env.example .env
 ```
 
 Edit `.env` if you need custom host/URL values or add a Slack webhook.
+
+Start the stack:
+
+```bash
+docker compose up -d --build
+```
