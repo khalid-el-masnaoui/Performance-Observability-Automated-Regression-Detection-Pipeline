@@ -119,3 +119,10 @@ Verify services:
 ```bash
 docker compose ps
 ```
+
+## Endpoints & Routes
+
+### Service Endpoints
+| Service | URL | Notes |
+|---|---|---|
+| PHP App | http://localhost:8080 | Main web app routes and `/flamegraphs` |
