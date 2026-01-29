@@ -145,3 +145,10 @@ docker compose ps
 - `/metrics` — Prometheus metrics endpoint
 - `/flamegraphs` — searchable SPX flamegraph list
 - `/spx-data/` — raw SPX JSON profile output
+
+
+### API Endpoints
+
+#### Regression Service (`:8090`)
+
+- `POST /baseline` - Store baseline metrics
