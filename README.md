@@ -155,3 +155,9 @@ docker compose ps
 - `POST /alert` - Handle Prometheus alerts
 - `POST /check` - Manual regression check
 - `GET /health` - Health check
+
+#### Report Service (`:5100`)
+
+- `POST /generate-baseline` - Generate baseline PDF report
+- `POST /generate` - Generate regression PDF report
+- `GET /health` - Health check
