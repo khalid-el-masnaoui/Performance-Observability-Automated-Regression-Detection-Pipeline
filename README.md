@@ -152,3 +152,6 @@ docker compose ps
 #### Regression Service (`:8090`)
 
 - `POST /baseline` - Store baseline metrics
+- `POST /alert` - Handle Prometheus alerts
+- `POST /check` - Manual regression check
+- `GET /health` - Health check
