@@ -161,3 +161,17 @@ docker compose ps
 - `POST /generate-baseline` - Generate baseline PDF report
 - `POST /generate` - Generate regression PDF report
 - `GET /health` - Health check
+
+
+## Environment Variables
+
+The default values are defined in `.env.example`:
+
+```ini
+REDIS_HOST=redis
+NGINX_URL=http://nginx
+PROM_URL=http://prometheus:9090
+REPORT_URL=http://report-service:5000
+REGRESSION_SERVICE_URL=http://regression-service:8090
+SLACK_WEBHOOK=https://hooks.slack.com/services/XXXXX/XXXXX/XXXXX
+```
