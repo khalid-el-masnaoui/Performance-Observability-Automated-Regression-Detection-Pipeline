@@ -195,3 +195,12 @@ The regression service then:
 - triggers SPX profiling for the route,
 - sends Slack notifications if configured,
 - creates a PDF regression report.
+
+### Manual check
+
+You can also run a manual baseline check with:
+
+```bash
+curl -X POST http://localhost:8090/check
+
+```
