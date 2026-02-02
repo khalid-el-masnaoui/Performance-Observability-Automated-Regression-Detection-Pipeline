@@ -185,3 +185,13 @@ The regression service stores baseline metrics in Redis using keys like `baselin
 ### Alert handling
 
 `Alertmanager` sends alerts to the regression service at `/alert`.
+
+The regression service then:
+
+- loads the baseline for the route,
+- queries current metrics from Prometheus,
+- calculates p95 increase,
+- flags a regression when the increase is `> 30%`,
+- triggers SPX profiling for the route,
+- sends Slack notifications if configured,
+- creates a PDF regression report.
