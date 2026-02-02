@@ -204,3 +204,9 @@ You can also run a manual baseline check with:
 curl -X POST http://localhost:8090/check
 
 ```
+
+#### Workflow
+
+k6 simulates:
+
+- baseline traffic to generate the baseline
