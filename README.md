@@ -232,3 +232,12 @@ next request → SPX profiling ON
          ↓
 flamegraph generated
 ```
+
+## The Tracked Metrics
+
+| Metric      | Why                 |
+| ----------- | ------------------- |
+| p95         | tail latency        |
+| p99         | extreme latency     |
+| avg         | overall performance |
+| rps         | traffic load        |
