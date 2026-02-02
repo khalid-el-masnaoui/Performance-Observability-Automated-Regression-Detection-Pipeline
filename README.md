@@ -175,3 +175,9 @@ REPORT_URL=http://report-service:5000
 REGRESSION_SERVICE_URL=http://regression-service:8090
 SLACK_WEBHOOK=https://hooks.slack.com/services/XXXXX/XXXXX/XXXXX
 ```
+
+## How Regression Detection Works
+
+### Baseline storage
+
+The regression service stores baseline metrics in Redis using keys like `baseline:/api/users`.
