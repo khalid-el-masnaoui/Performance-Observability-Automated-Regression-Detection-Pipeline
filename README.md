@@ -244,3 +244,5 @@ flamegraph generated
 | error_rate  | reliability         |
 | max_latency | spikes              |
 | throughput  | system capacity     |
+
+**Note**: the regression is only checked against `P95`, you can extend it to include other metrics.
