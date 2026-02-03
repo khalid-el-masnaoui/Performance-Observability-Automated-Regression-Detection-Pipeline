@@ -257,3 +257,9 @@ flamegraph generated
 - `alertmanager/alertmanager.yml` — routes alerts to regression service
 - `k6/baseline.js` — baseline traffic generator
 - `k6/ingest_slow_requests.js` — regression/slow traffic scenario
+
+## Reports and Artifacts
+
+- `reports/baselines/` — baseline PDF reports (you find report examples in `examples`)
+- `reports/regressions/` — regression PDF reports (you find report examples in `examples`)
+- `spx-data/` — SPX profile JSON output
