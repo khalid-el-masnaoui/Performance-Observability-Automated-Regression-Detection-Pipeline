@@ -263,3 +263,8 @@ flamegraph generated
 - `reports/baselines/` — baseline PDF reports (you find report examples in `examples`)
 - `reports/regressions/` — regression PDF reports (you find report examples in `examples`)
 - `spx-data/` — SPX profile JSON output
+
+<p float="left" align="middle">
+    <img src="images/slack_alert.png" width="40%" /> 
+    <img src="images/regression_chart.png" width="40%" /> 
+</p>
