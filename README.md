@@ -268,3 +268,15 @@ flamegraph generated
     <img src="images/slack_alert.png" width="40%" /> 
     <img src="images/regression_chart.png" width="40%" /> 
 </p>
+
+
+## Troubleshooting
+
+### Common Issues
+
+**Flamegraphs not generating**:
+```bash
+# Ensure permissions
+chmod -R 777 spx-data
+chmod 33:33 spx-data # 33 is the UID of www-data which php-fpm/nginx runs under
+```
