@@ -294,3 +294,8 @@ docker exec -it prometheus-spx-redis-1 redis-cli KEYS "*"
 **No alerts firing**:
 - Verify Prometheus can reach Alertmanager
 - Check alert rules syntax
+
+**Regression not detected**:
+- Ensure baseline is set
+- Check Prometheus query alignment
+- Verify sufficient traffic volume
