@@ -299,3 +299,6 @@ docker exec -it prometheus-spx-redis-1 redis-cli KEYS "*"
 - Ensure baseline is set
 - Check Prometheus query alignment
 - Verify sufficient traffic volume
+
+**Baseline & Regression reports missing**:
+- If regression reports are missing, confirm `report-service` is healthy at `http://localhost:5100/health`.
