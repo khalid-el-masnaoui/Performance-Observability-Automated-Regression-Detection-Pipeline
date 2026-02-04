@@ -316,3 +316,14 @@ docker compose logs -f [service-name]
 - Route normalization is implemented in `src/index.php` to replace numeric IDs and UUIDs with normalized route labels.
 - Metrics are recorded using Prometheus histograms with route, method, and status labels.
 - The sample PHP app is intentionally simple and can be replaced by any PHP codebase.
+
+## Additional Resources
+
+- [Prometheus Documentation](https://prometheus.io/docs/)
+- [Grafana Documentation](https://grafana.com/docs/)
+- [k6 Documentation](https://k6.io/docs/)
+- [SPX Profiler](https://github.com/NoiseByNorthwest/php-spx)
+
+## License
+
+This repository has no license defined; add one if you want to share or publish it.
