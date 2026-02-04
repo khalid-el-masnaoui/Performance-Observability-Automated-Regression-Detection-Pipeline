@@ -280,3 +280,7 @@ flamegraph generated
 chmod -R 777 spx-data
 chmod 33:33 spx-data # 33 is the UID of www-data which php-fpm/nginx runs under
 ```
+
+**SPX Profiling not triggering**:
+- Check Redis connection
+- Verify SPX configuration in `php/spx.ini`
