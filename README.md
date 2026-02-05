@@ -15,6 +15,9 @@ This project integrates:
 
 This project is intended as a practical demo of how to wire **PHP request metrics**, **alerting**,  **dynamic profiler activation**,  **automatic regression detection** and **historical trend analysis & tracking** together into a reproducible Docker-based performance observability & automated regression detection pipeline.
 
+## Table Of Contents
+
+   - **[Overview](#overview)**
 
 
 ## Overview
