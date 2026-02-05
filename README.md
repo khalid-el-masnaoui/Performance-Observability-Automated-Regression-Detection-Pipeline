@@ -18,6 +18,32 @@ This project is intended as a practical demo of how to wire **PHP request metric
 ## Table Of Contents
 
    - **[Overview](#overview)**
+   - **[Architecture](#architecture)**
+   - **[Project Structure](#project-structure)**
+   - **[Prerequisites](#prerequisites)**
+   - **[Quick Start](#quick-start)**
+   - **[Endpoints & Routes](#endpoints-routes)**
+      - **[Service Endpoints](#service-endpoints)**
+      - **[Application routes](#application-routes)**
+      - **[Metrics and profiling](#metrics-and-profiling)**
+      - **[API Endpoints](#api-endpoints)**
+         - **[Regression Service (`:8090`)](#regression-service-8090)**
+         - **[Report Service (`:5100`)](#report-service-5100)**
+   - **[Environment Variables](#environment-variables)**
+   - **[How Regression Detection Works](#how-regression-detection-works)**
+      - **[Baseline storage](#baseline-storage)**
+      - **[Alert handling](#alert-handling)**
+      - **[Manual check](#manual-check)**
+         - **[Workflow](#workflow)**
+   - **[The Tracked Metrics](#the-tracked-metrics)**
+   - **[Configuration Files](#configuration-files)**
+   - **[Reports and Artifacts](#reports-and-artifacts)**
+   - **[Troubleshooting](#troubleshooting)**
+      - **[Common Issues](#common-issues)**
+      - **[Logs](#logs)**
+   - **[Notes](#notes)**
+   - **[Additional Resources](#additional-resources)**
+   - **[License](#license)**
 
 
 ## Overview
