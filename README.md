@@ -34,7 +34,7 @@ This project is intended as a practical demo of how to wire **PHP request metric
       - **[Baseline storage](#baseline-storage)**
       - **[Alert handling](#alert-handling)**
       - **[Manual check](#manual-check)**
-         - **[Workflow](#workflow)**
+   - **[Full Workflow](#full-workflow)**
    - **[The Tracked Metrics](#the-tracked-metrics)**
    - **[Configuration Files](#configuration-files)**
    - **[Reports and Artifacts](#reports-and-artifacts)**
