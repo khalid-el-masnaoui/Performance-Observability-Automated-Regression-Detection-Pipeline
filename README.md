@@ -235,7 +235,7 @@ curl -X POST http://localhost:8090/check
 
 ```
 
-#### Workflow
+## Full Workflow
 
 k6 simulates:
 
