@@ -1,0 +1,122 @@
+[
+  {
+    "timestamp": "2026-05-13T21:59:57.854845",
+    "route": "/api/users",
+    "baseline_p95": 0.476682060838395,
+    "current_p95": 1.7156,
+    "increase_percent": 259.90446063411304,
+    "regression": true,
+    "current_metrics": {
+      "p95": 1.7156,
+      "p99": 1.9431,
+      "avg": 0.5446,
+      "throughput": 1.564,
+      "max_latency": 181.2697
+    }
+  },
+  {
+    "timestamp": "2026-05-13T22:41:58.022682",
+    "route": "/api/users",
+    "baseline_p95": 0.4785940472895317,
+    "current_p95": 1.671,
+    "increase_percent": 249.1476773402296,
+    "regression": true,
+    "current_metrics": {
+      "p95": 1.671,
+      "p99": 1.9342,
+      "avg": 0.5068,
+      "throughput": 2.2545,
+      "max_latency": 195.0123
+    }
+  },
+  {
+    "timestamp": "2026-05-13T22:46:57.920753",
+    "route": "/api/users",
+    "baseline_p95": 0.4785940472895317,
+    "current_p95": 1.8,
+    "increase_percent": 276.1016272964771,
+    "regression": true,
+    "current_metrics": {
+      "p95": 1.8,
+      "p99": 1.96,
+      "avg": 0.6577,
+      "throughput": 2.2182,
+      "max_latency": 364.0361
+    }
+  },
+  {
+    "timestamp": "2026-05-13T22:57:57.919273",
+    "route": "/api/users",
+    "baseline_p95": 0.47729582748155247,
+    "current_p95": 1.638,
+    "increase_percent": 243.183389773779,
+    "regression": true,
+    "current_metrics": {
+      "p95": 1.638,
+      "p99": 1.9343,
+      "avg": 0.4933,
+      "throughput": 2.2545,
+      "max_latency": 194.4203
+    }
+  },
+  {
+    "timestamp": "2026-05-13T23:02:57.823205",
+    "route": "/api/users",
+    "baseline_p95": 0.47729582748155247,
+    "current_p95": 1.8,
+    "increase_percent": 277.1246041470099,
+    "regression": true,
+    "current_metrics": {
+      "p95": 1.8,
+      "p99": 1.96,
+      "avg": 0.6464,
+      "throughput": 2.2182,
+      "max_latency": 385.9477
+    }
+  },
+  {
+    "timestamp": "2026-05-13T23:07:57.862400",
+    "route": "/api/users",
+    "baseline_p95": 0.47729582748155247,
+    "current_p95": 1.7983,
+    "increase_percent": 276.76843090975996,
+    "regression": true,
+    "current_metrics": {
+      "p95": 1.7983,
+      "p99": 1.9597,
+      "avg": 0.6596,
+      "throughput": 2.2364,
+      "max_latency": 586.0973
+    }
+  },
+  {
+    "timestamp": "2026-05-13T23:16:57.917876",
+    "route": "/api/users",
+    "baseline_p95": 0.47729582748155247,
+    "current_p95": 1.804,
+    "increase_percent": 277.96265882289214,
+    "regression": true,
+    "current_metrics": {
+      "p95": 1.804,
+      "p99": 1.9608,
+      "avg": 0.6672,
+      "throughput": 2.2182,
+      "max_latency": 767.9264
+    }
+  },
+  {
+    "timestamp": "2026-05-13T23:22:57.894435",
+    "route": "/api/users",
+    "baseline_p95": 0.47729582748155247,
+    "current_p95": 1.8018,
+    "increase_percent": 277.5017287511569,
+    "regression": true,
+    "current_metrics": {
+      "p95": 1.8018,
+      "p99": 1.9604,
+      "avg": 0.6625,
+      "throughput": 2.2,
+      "max_latency": 933.9569
+    }
+  }
+]
