@@ -290,8 +290,8 @@ flamegraph generated
 
 ## Reports and Artifacts
 
-- `reports/baselines/` — baseline PDF reports (you find report examples in `example-pdf-reports`)
-- `reports/regressions/` — regression PDF reports (you find report examples in `example-pdf-reports`)
+- `reports/baselines/` — baseline PDF reports (you find report examples in `example-reports`)
+- `reports/regressions/` — regression PDF reports (you find report examples in `example-reports`)
 - `spx-data/` — SPX profile JSON output
 
 <p float="left" align="middle">
