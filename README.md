@@ -42,6 +42,7 @@ This project is intended as a practical demo of how to wire **PHP request metric
       - **[Common Issues](#common-issues)**
       - **[Logs](#logs)**
    - **[Notes](#notes)**
+   - **[Contributing](#contributing)**
    - **[Additional Resources](#additional-resources)**
    - **[License](#license)**
 
