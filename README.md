@@ -347,6 +347,10 @@ docker compose logs -f [service-name]
 - Metrics are recorded using Prometheus histograms with route, method, and status labels.
 - The sample PHP app is intentionally simple and can be replaced by any PHP codebase.
 
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
 ## Additional Resources
 
 - [Prometheus Documentation](https://prometheus.io/docs/)
