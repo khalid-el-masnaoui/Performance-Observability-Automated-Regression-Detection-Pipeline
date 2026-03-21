@@ -214,7 +214,7 @@ The regression service stores baseline metrics in Redis using keys like `baselin
 
 ### Alert handling
 
-`Alertmanager` sends alerts to the regression service at `/alert`.
+`Alertmanager` sends alerts (based on `P95`) to the regression service at `/alert`
 
 The regression service then:
 
