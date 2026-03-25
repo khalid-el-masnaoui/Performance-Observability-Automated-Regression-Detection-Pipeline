@@ -11,7 +11,7 @@ This project integrates:
 - 🚨 Alertmanager for alert routing
 - 🤖 Custom Automated regression detection service (Node.js)
 - 🧪 k6 load testing for automated performance validation
-- 📄 PDF report generation for baselines & regressions (Python)
+- 📄 PDF report generation for baselines & regressions (:snake: Python)
 
 This project is intended as a practical demo of how to wire **PHP request metrics**, **alerting**,  **dynamic profiler activation**,  **automatic regression detection** and **historical trend analysis & tracking** together into a reproducible Docker-based performance observability & automated regression detection pipeline.
 
