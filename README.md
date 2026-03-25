@@ -361,8 +361,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## License
 
 This repository has no license defined; add one if you want to share or publish it.
-
----
-
-This project provides a full (almost :upside_down_face:) production-grade performance engineering stack for PHP applications.</content>
-<parameter name="filePath">https://github.com/khalid-el-masnaoui/Performance-Observability-Automated-Regression-Detection-Pipeline.git/README.md
