@@ -117,6 +117,7 @@ Grafana Dashboards + Slack Alerts
 ├── reports/                    # Generated PDFs
 ├── spx-data/                   # Flamegraph storage
 └── testing/                    # Test utilities
+└──.env.example                 # Sample environment configuration
 ```
 
 
