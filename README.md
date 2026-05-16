@@ -358,22 +358,25 @@ This will run the same regression evaluation for all routes in Redis.
 
 **Note**: the regression is only checked against `P95`, you can extend it to include other metrics.
 
-## Configuration Files
-
-- `docker-compose.yml` — full stack definition
-- `nginx/default.conf` — app routing, metrics, SPX, flamegraph endpoint
-- `php/php.dockerfile` — PHP image with SPX and Redis extensions
-- `prometheus/prometheus.yml` — Prometheus scrape config
-- `prometheus/alerts.yml` — alert rule for slow endpoints
-- `alertmanager/alertmanager.yml` — routes alerts to regression service
-- `k6/baseline.js` — baseline traffic generator
-- `k6/ingest_slow_requests.js` — regression/slow traffic scenario
-
 ## Reports and Artifacts
 
 - `reports/baselines/` — baseline PDF reports (you find report examples in `example-reports`)
 - `reports/regressions/` — regression PDF reports (you find report examples in `example-reports`)
 - `spx-data/` — SPX profile JSON output
+
+The regression report contains: 
+
+| Feature              | Included |
+| -------------------- | -------- |
+| p95/p99/avg          | ✅        |
+| throughput           | ✅        |
+| max latency          | ✅        |
+| error rate           | ✅        |
+| historical trends    | ✅        |
+| charts               | ✅        |
+| historical tables    | ✅        |
+| regression evolution | ✅        |
+
 
 <p float="left" align="middle">
     <img src="images/slack_alert.png" width="40%" /> 
