@@ -286,6 +286,8 @@ If a regression is detected, the service:
 
 ## Full Workflow
 
+### General
+
 k6 simulates:
 
 - baseline traffic to generate the baseline
@@ -311,6 +313,7 @@ next request → SPX profiling ON
          ↓
 flamegraph generated
 ```
+
 
 ## The Tracked Metrics
 
