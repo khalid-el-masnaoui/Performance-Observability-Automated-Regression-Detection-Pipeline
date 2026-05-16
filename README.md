@@ -185,6 +185,15 @@ cd testing/
 make test-ai-anomaly-detection
 ```
 
+**6. Inspect reports and flamegraphs**
+
+- Baseline and regression PDFs are written to `./reports`
+- SPX JSON profiles are written to `./spx-data`
+- Flamegraph browser is available at `http://localhost:8080/flamegraphs`
+- Prometheus UI: `http://localhost:9090`
+- Grafana UI: `http://localhost:3000`
+- Alertmanager UI: `http://localhost:9093`
+
 
 ## Endpoints & Routes
 
