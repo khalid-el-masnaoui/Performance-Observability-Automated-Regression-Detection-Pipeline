@@ -149,6 +149,12 @@ cp .env.example .env
 
 Update values as needed, especially **`SLACK_WEBHOOK`**.
 
+**3. Start the full stack**
+
+```bash
+docker compose up -d --build
+```
+
 ## Endpoints & Routes
 
 ### Service Endpoints
