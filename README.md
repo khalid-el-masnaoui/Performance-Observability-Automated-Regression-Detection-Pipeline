@@ -333,6 +333,16 @@ flamegraph generated
    - Slack notification is generated
    - Regression PDF report is generated
 
+### Manual regression check
+
+Use the manual endpoint to evaluate all stored baselines at once:
+
+```bash
+curl -X POST http://localhost:8090/check
+```
+
+This will run the same regression evaluation for all routes in Redis.
+
 
 ## The Tracked Metrics
 
