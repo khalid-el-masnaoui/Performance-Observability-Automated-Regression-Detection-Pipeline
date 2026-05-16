@@ -155,6 +155,14 @@ Update values as needed, especially **`SLACK_WEBHOOK`**.
 docker compose up -d --build
 ```
 
+**4. Validate services**
+
+```bash
+curl http://localhost:8090/health # regression service
+curl http://localhost:5000/health # report service
+```
+
+
 ## Endpoints & Routes
 
 ### Service Endpoints
