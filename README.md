@@ -240,16 +240,16 @@ make test-ai-anomaly-detection
 
 ## Environment Variables
 
-The default values are defined in `.env.example`:
+Use **`.env`** to configure runtime settings for the PHP app, k6, and services.
 
-```ini
-REDIS_HOST=redis
-NGINX_URL=http://nginx
-PROM_URL=http://prometheus:9090
-REPORT_URL=http://report-service:5000
-REGRESSION_SERVICE_URL=http://regression-service:8090
-SLACK_WEBHOOK=https://hooks.slack.com/services/XXXXX/XXXXX/XXXXX
-```
+Important variables:
+
+- `REDIS_HOST` — Redis service
+- `NGINX_URL` — Nginx URL used by k6 and scripts
+- `PROM_URL` — Prometheus URL used by k6
+- `REPORT_URL` — report-service URL
+- `REGRESSION_SERVICE_URL` — regression-service URL
+- `SLACK_WEBHOOK` — Slack webhook for alert notifications
 
 ## How Regression Detection Works
 
