@@ -69,42 +69,21 @@ This project is designed to detect performance regressions automatically by:
 The stack is designed to demonstrate a simple full pipeline:
 
 
-```bash
-[k6 Load Test]
-      ↓
-   Nginx
-      ↓
- PHP-FPM Application
-      ↓
-Prometheus Metrics Exporter
-      ↓
-Prometheus Server
-      ↓
-Alertmanager
-      ↓
-Regression Detector (Node.js)
-      ↓
-Generate PDF Report & Historical Tracking (Python)
-      ↓
-SPX Trigger Service
-      ↓
-SPX PHP Profiler
-      ↓
-Flamegraph Storage
-      ↓
-Flamegraph UI
-      ↓
-Grafana Dashboards + Slack Alerts
-```
+<p float="left" align="middle">
+    <img src="images/performance-observability-pipeline.png" width="80%" /> 
+</p>
 
-- `nginx` reverse-proxies traffic to the PHP application
-- PHP app exposes `/metrics`, `/flamegraphs`, and application routes
-- Prometheus scrapes PHP, Nginx, and PHP-FPM exporter metrics
-- Alertmanager sends webhook alerts to the regression service
-- Regression service loads baselines from Redis and evaluates current metrics
-- Regression service triggers SPX profiling via Redis and generates reports
-- Report service writes baseline and regression PDF reports to disk
-- `k6` generates synthetic traffic to validate baseline and regression behavior
+**Data Flow**:
+1. k6 or users hit the PHP app through Nginx
+2. PHP app records Prometheus metrics
+3. Prometheus scrapes metrics and evaluates alerts
+4. Alertmanager POSTs matched alerts to **`regression-service`** `/alert`
+5. **`regression-service`** queries Prometheus and checks anomaly/regression verdict
+6. If regression is detected:
+   - SPX profiling is triggered
+   - Slack notification is sent
+   - PDF regression report is generated
+
 
 ## Project Structure
 
