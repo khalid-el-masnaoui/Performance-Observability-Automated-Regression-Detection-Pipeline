@@ -30,18 +30,22 @@ This project is intended as a practical demo of how to wire **PHP request metric
          - **[Regression Service (`:8090`)](#regression-service-8090)**
          - **[Report Service (`:5100`)](#report-service-5100)**
    - **[Environment Variables](#environment-variables)**
-   - **[How Regression Detection Works](#how-regression-detection-works)**
+   - **[How it works](#how-it-works)**
       - **[Baseline storage](#baseline-storage)**
       - **[Alert handling](#alert-handling)**
-      - **[Manual check](#manual-check)**
+      - **[Regression service](#regression-service)**
+      - **[SPX profiling & Flamegraphs](#spx-profiling-flamegraphs)**
    - **[Full Workflow](#full-workflow)**
+      - **[General](#general)**
+      - **[Baseline generation workflow](#baseline-generation-workflow)**
+      - **[Regression alert workflow](#regression-alert-workflow)**
+      - **[Manual regression check](#manual-regression-check)**
    - **[The Tracked Metrics](#the-tracked-metrics)**
-   - **[Configuration Files](#configuration-files)**
    - **[Reports and Artifacts](#reports-and-artifacts)**
+   - **[Notes](#notes)**
    - **[Troubleshooting](#troubleshooting)**
       - **[Common Issues](#common-issues)**
       - **[Logs](#logs)**
-   - **[Notes](#notes)**
    - **[Contributing](#contributing)**
    - **[Additional Resources](#additional-resources)**
    - **[License](#license)**
